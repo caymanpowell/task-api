@@ -1,6 +1,6 @@
 import prisma from '../config/db.js';
 
-export async function findAll() {
+export async function findAll(completed) {
   if (completed === undefined) {
     return prisma.task.findMany();
   }
